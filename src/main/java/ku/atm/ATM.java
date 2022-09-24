@@ -25,7 +25,8 @@ public class ATM {
 
 	public void deposit(double value) {
 		if (currentAccount != null)
-            currentAccount.deposit(value);
+			if(value > 0)
+            	currentAccount.deposit(value);
 	}
 
 	public double getBalance() {
